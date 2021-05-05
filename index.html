@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background: black;
+            padding: 1em;
+            display: flex;
+            border: 4px solid yellow;
+        }
+
+
+        header>* {
+            width: 100%;
+        }
+
+        header>.search-bar {
+            border: 1px solid salmon;
+            display: flex;
+            align-items: center;
+        }
+
+        header>.search-bar>.logo {
+            width: 40px;
+            /* ISSO NÃO É MUITO "RESPONSIVO" - ATUALIZE */
+            height: 40px;
+            border-radius: 50%;
+            background-color: steelblue;
+        }
+
+        header>.search-bar>.search {
+            background-color: white;
+            padding: .25em;
+            border-radius: 30px;
+            margin-left: .25em;
+            display: flex;
+            align-items: center;
+        }
+
+        header>.search-bar>.search .icon-measure {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background-color: black;
+            margin-right: .25em;
+        }
+
+        header>.search-bar>.search input {
+            padding: 0;
+            margin: 0;
+            background-color: transparent;
+            border: none;
+            /* border: 1px solid black; */
+            font-size: 1.02em;
+        }
+
+        header>.menu {
+            border: 1px solid slateblue;
+            display: flex;
+        }
+
+        header>.menu>.squared-icon {
+            background-color: rgba(255, 255, 255, .1);
+            width: 100%;
+            /* REMOVER ESSE CALC */
+            height: calc(100% - .5em);
+            margin: .25em;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        header>.menu>.menu {
+            display: none;
+            flex: none;
+            background-color: red;
+            width: 50px;
+        }
+
+        header>.menu>.squared-icon:hover {
+            background-color: snow;
+        }
+
+        header>.side-menu {
+            border: 1px solid seagreen;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        header>.side-menu>.rounded-icon {
+            /* ISSO NÃO É MUITO "RESPONSIVO" - ATUALIZE */
+            width: 40px;
+            /* ISSO NÃO É MUITO "RESPONSIVO" - ATUALIZE */
+            height: 40px;
+            border-radius: 50%;
+            margin: .25em;
+            background-color: snow;
+        }
+
+        @media (max-width: 900px) {
+            header>.menu>.menu {
+                display: inline-block;
+            }
+
+            header>.menu>.squared-icon.step-1 {
+                display: none;
+            }
+
+        }
+
+        @media (max-width: 800px) {
+            header>.menu>.squared-icon.step-2 {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="search-bar">
+            <div class="logo"></div>
+            <div class="search">
+                <div class="icon-measure"></div>
+                <input>
+            </div>
+        </div>
+
+        <div class="menu">
+            <div class="squared-icon menu">
+                MENU
+            </div>
+            <div class="squared-icon step-1"></div>
+            <div class="squared-icon step-1"></div>
+            <div class="squared-icon step-2"></div>
+            <div class="squared-icon step-2"></div>
+            <div class="squared-icon step-2"></div>
+        </div>
+
+        <div class="side-menu">
+            <div class="rounded-icon"></div>
+            <div class="rounded-icon"></div>
+            <div class="rounded-icon"></div>
+            <div class="rounded-icon"></div>
+        </div>
+    </header>
+</body>
+
+</html>
